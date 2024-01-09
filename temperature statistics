@@ -1,0 +1,64 @@
+import random
+import statistics
+
+temperatures = []
+hours = []
+
+for i in range(30):
+    for j in range(24):
+        hours.append(random.randint(74,100))
+    temperatures.append(hours)
+    hours = []
+
+print(temperatures)
+
+print("\n")
+
+min_month = []
+max_month = []
+mean_month = []
+median_month = []
+mode_month = []
+variance_month = []
+stdev_month = []
+
+for temperature in temperatures:
+        print(min(temperature))
+        min_month.append(min(temperature))
+        print(max(temperature))
+        max_month.append(max(temperature))
+        print(statistics.mean(temperature))
+        mean_month.append(statistics.mean(temperature))
+        print(statistics.median(temperature))
+        median_month.append(statistics.median(temperature))
+        print(statistics.mode(temperature))
+        mode_month.append(statistics.mode(temperature))
+        print(statistics.variance(temperature))
+        variance_month.append(statistics.variance(temperature))
+        print(statistics.stdev(temperature))
+        stdev_month.append(statistics.stdev(temperature))
+        
+        print("\n")
+
+print("For the month")
+
+min_of_month = min(min_month)
+print(min_of_month)
+
+max_of_month = max(max_month)
+print(max_of_month)
+
+mean_of_month = statistics.mean(mean_month)
+print(mean_of_month)
+
+median_of_month = statistics.median(median_month)
+print(median_of_month)
+
+mode_of_month = statistics.mode(mode_month)
+print(mode_of_month)
+
+variance_of_month = statistics.variance(variance_month)
+print(variance_of_month)
+
+stdev_of_month=statistics.stdev(stdev_month)
+print(stdev_of_month)
